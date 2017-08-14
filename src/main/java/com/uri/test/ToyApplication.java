@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("/live")
 public class ToyApplication {
 	@GetMapping(produces = MediaType.TEXT_PLAIN_VALUE, value = "/filter")
 	public String filter(@RequestParam("ids") int[] ids,
@@ -25,7 +24,7 @@ public class ToyApplication {
 		return "ok";
 	}
 
-	@RequestMapping("/health_check")
+	@GetMapping("/health_check")
 	public String health() {
 		return "ok";
 	}
