@@ -25,6 +25,11 @@ public class ToyApplication {
 		return "ok";
 	}
 
+	@RequestMapping("/health_check")
+	public String health() {
+		return "ok";
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(ToyApplication.class, args);
 	}
